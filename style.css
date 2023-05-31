@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* variables */
+
+:root {
+    --primary-soft-blue: #8bacda;
+    --primary-cyan: #00fff7;
+
+    --neutral-main-bg-blue: #0d192b;
+    --neutral-card-bg-blue: #14253d;
+    --neutral-line-blue: #2f415b;
+    --neutral-white: #ffffff;
+}
+
+/* globals */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--neutral-main-bg-blue);
+    color: var(--neutral-white);
+    font-family: 'Outfit', sans-serif;
+}
+
+/* styling */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    background: var(--neutral-card-bg-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.image{
+    width: 80%;
+    height: 240px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.image img{
+    width: 100%;
+}
+
+.image .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00fff780;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    transition: 0.2s;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.image:hover .hover{
+    visibility: visible;
+}
+
+.image .hover img {
+    width: unset;
+}
+
+.card .nft {
+    width: 100%;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.title {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.title a {
+    transition: 0.2s ease-in-out;
+}
+
+.title a:hover {
+    color: var(--primary-cyan);
+}
+
+.card a {
+    align-self: start;
+    color: var(--neutral-white);
+    text-decoration: none;
+}
+
+.card a h3 {
+    font-weight: 400;
+}
+
+.info {
+    width: 80%;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--primary-soft-blue);
+}
+
+.row {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.left {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    width: 50%;
+    color: var(--primary-cyan);
+}
+
+.right {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--primary-soft-blue);
+}
+
+hr{
+    width: 80%;
+    border-top: 1px solid var(--neutral-line-blue);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.end {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.end img {
+    width: 25px;
+    border: 1px solid var(--neutral-white);
+    border-radius: 50%;
+}
+
+.end p {
+    margin: auto 0;
+    font-size: 15px;
+    color: var(--primary-soft-blue);
+    font-weight: 300;
+}
+
+.end a {
+    transition: 0.2s ease-in-out;
+}
+
+.end a:hover {
+    color: var(--primary-cyan);
+}
